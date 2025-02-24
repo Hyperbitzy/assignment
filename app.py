@@ -45,10 +45,10 @@ app.layout = html.Div([
 
         dcc.Tab(label='Future Technology Trends', children=[
             html.H2('Projected Programming Languages (2025)'),
-            dcc.Graph(figure=px.bar(lang_data, x='Language', y='Projected_2025', title='Projected Top 10 Programming Languages (2025)')),
+            dcc.Graph(figure=px.line(lang_data, x='Language', y='Projected_2025', title='Projected Top 10 Programming Languages (2025)')),
 
             html.H2('Projected Databases (2025)'),
-            dcc.Graph(figure=px.bar(db_data, x='Database', y='Projected_2025', title='Projected Top 10 Databases (2025)'))
+            dcc.Graph(figure=px.line(db_data, x='Database', y='Projected_2025', title='Projected Top 10 Databases (2025)'))
         ]),
 
         dcc.Tab(label='Demographics', children=[
